@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #0c0612;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(236, 72, 153, 0.12) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(219, 39, 119, 0.08) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(244, 63, 94, 0.04) 0px, transparent 60%);
+    background-attachment: fixed;
+    color: #f1f5f9;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.font-display {
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Pink glow & card styles */
+.pink-glow {
+  box-shadow: 0 0 25px -5px rgba(236, 72, 153, 0.35);
+}
+
+.pink-glow-sm {
+  box-shadow: 0 0 15px -3px rgba(236, 72, 153, 0.25);
+}
+
+.pink-card {
+  background: linear-gradient(145deg, rgba(26, 12, 33, 0.85) 0%, rgba(16, 7, 24, 0.95) 100%);
+  border: 1px solid rgba(244, 114, 182, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pink-card:hover {
+  border-color: rgba(244, 114, 182, 0.45);
+  box-shadow: 0 12px 35px -10px rgba(236, 72, 153, 0.25);
+  transform: translateY(-3px);
+}
+
+.pink-card-active {
+  background: linear-gradient(145deg, rgba(38, 14, 48, 0.95) 0%, rgba(24, 8, 35, 0.98) 100%);
+  border-color: rgba(244, 114, 182, 0.6);
+  box-shadow: 0 10px 30px -8px rgba(236, 72, 153, 0.35);
+}
+
+.nav-glass {
+  background: rgba(12, 6, 18, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(244, 114, 182, 0.15);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom scrollbar for desktop */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0612;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(236, 72, 153, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(236, 72, 153, 0.7);
+}
